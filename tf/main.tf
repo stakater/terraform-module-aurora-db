@@ -22,11 +22,11 @@ module "aurora-db" {
   aurora_db_password = "${var.database_password}"
 
   # DB Backup
-  backup_retention_period = ${var.backup_retention_period}
+  backup_retention_period = "${var.backup_retention_period}"
   preferred_backup_window = "${var.preferred_backup_window}"
   preferred_maintenance_window = "${var.preferred_maintenance_window}"
 
   cluster_instance_count = "${var.cluster_instance_count}"
   cluster_instance_class = "${var.cluster_instance_class}"
-  publicly_accessible = ${var.publicly_accessible}
+  publicly_accessible = "${var.publicly_accessible}"
 }
