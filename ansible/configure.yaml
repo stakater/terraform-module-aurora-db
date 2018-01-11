@@ -1,6 +1,6 @@
 ---
 ###########################
-# Setup RDS
+# Setup aurora-db
 ###########################
 
 - hosts: localhost

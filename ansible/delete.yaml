@@ -1,9 +1,9 @@
 ---
 ###########################
-# Setup RDS
+# Setup aurora-db
 ###########################
 
 - hosts: localhost
   connection: local
   roles:
-    - delete-rds
+    - delete-aurora-db

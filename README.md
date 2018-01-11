@@ -1,1 +1,1 @@
-# Terraform Module to create AWS RDS
+# Terraform Module to create AWS aurora-db

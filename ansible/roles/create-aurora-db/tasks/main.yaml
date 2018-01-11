@@ -1,10 +1,10 @@
 ---
 
 ####################
-# Create rds using Terraform
+# Create aurora-db using Terraform
 ####################
 
-- name: Create the physical RDS
+- name: Create the physical aurora-db
   shell: |
     cd ../
     mkdir -p build/
