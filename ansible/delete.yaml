@@ -1,0 +1,9 @@
+---
+###########################
+# Setup aurora-db
+###########################
+
+- hosts: localhost
+  connection: local
+  roles:
+    - delete-aurora-db
