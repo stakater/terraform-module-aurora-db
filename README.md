@@ -16,9 +16,12 @@ $ touch tfvars.sh
 
 2. Edit `tfvars.sh`, paste, and modify the following as needed.
 
+_Note: S3 backend bucket needs to be created first._
+
 ```
 export TF_VAR_stack_name_prefix="stakater"
 export TF_VAR_environment="dev"
+export TF_VAR_s3_bucket="449074299682-aurora-dev-state-store"
 export TF_VAR_vpc_id="vpc-618a7307"
 export TF_VAR_vpc_cidr="10.241.0.0/16"
 export TF_VAR_private_subnet_ids="subnet-eafee68d,subnet-65a44b2d,subnet-0a735751"
@@ -30,8 +33,6 @@ export TF_VAR_database_password="root12345"
 ```
 
 3. Run `ansible-playbook configure.yaml create.yaml`
-
-_Before running playbooks s3 backend needs to be created first. According to naming convention it would be `<aws_accountid>-${TF_VAR_stack_name_prefix}-${TF_VAR_environment}-state-store`_
 
 ## Delete
 
