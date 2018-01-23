@@ -1,9 +1,29 @@
-# Terraform Module to create AWS aurora-db
-
+### 1. Introduction
 This repository contains tooling for deploying aurora-db in Amazon AWS using terraform and ansible.
 
+### 2. Context
+This repo is part of a parent project to achieve the ability of possibility of controlled deployments in different environments so, that we can rollback
 
-# How to use it
+### 3. Problem Statement 
+We need infrastructure modules to be pulled by the driver pipeline to be consistent to a standard format so that it can execute them in one job and push their states to output repos.
+
+### 4. Solution 
+
+The solution is to pack the CI, CD, and destroy scripts consuming terraform module in ansible playbooks and provide the consistent interface to driver repo.
+
+#### Technology Stack
+
+* Ansible
+* Bash
+* Terraform
+
+##### Infrastructure
+
+This project can be run from any type of host with no platform restrictions. However, it was originally intended to be used by a Jenkins job.
+
+### 5. Usage 
+
+#### Running
 
 0. You need to install ansible and terraform first
 
@@ -34,6 +54,38 @@ export TF_VAR_database_password="root12345"
 
 3. Run `ansible-playbook configure.yaml create.yaml`
 
-## Delete
+#### Delete
 
 Run `ansible-playbook configure.yaml delete.yaml`
+
+### 6. Help 
+
+**Got a question?** 
+File a GitHub [issue](https://github.com/stakater/terraform-module-aurora-db/issues), send us an [email](stakater@gmail.com).
+
+### 7. Contributing 
+
+
+#### Bug Reports & Feature Requests
+
+Please use the [issue tracker](https://github.com/stakater/terraform-module-aurora-db/issues) to report any bugs or file feature requests.
+
+#### Developing
+
+PRs are welcome. In general, we follow the "fork-and-pull" Git workflow.
+
+ 1. **Fork** the repo on GitHub
+ 2. **Clone** the project to your own machine
+ 3. **Commit** changes to your own branch
+ 4. **Push** your work back up to your fork
+ 5. Submit a **Pull request** so that we can review your changes
+
+NOTE: Be sure to merge the latest from "upstream" before making a pull request!
+
+### 8. Changelog 
+
+View our closed [Pull Requests](https://github.com/stakater/terraform-module-aurora-db/pulls?q=is%3Apr+is%3Aclosed).
+
+### 9. License 
+
+Apache2 © [Stakater](https://stakater.com)
