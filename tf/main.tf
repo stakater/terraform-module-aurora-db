@@ -17,11 +17,13 @@ module "aurora-db" {
   vpc_cidr = "${var.vpc_cidr}"
   subnets = "${var.private_subnet_ids}"
 
+  engine         = "${var.engine}"
   aurora_db_name = "${var.database_name}"
   aurora_db_username = "${var.database_username}"
   aurora_db_password = "${var.database_password}"
 
   # DB Backup
+  skip_final_snapshot     = "${var.skip_final_snapshot}"
   backup_retention_period = "${var.backup_retention_period}"
   preferred_backup_window = "${var.preferred_backup_window}"
   preferred_maintenance_window = "${var.preferred_maintenance_window}"

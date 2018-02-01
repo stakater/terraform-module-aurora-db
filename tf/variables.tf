@@ -49,3 +49,11 @@ variable "cluster_instance_class" {
 variable "publicly_accessible" {
     default = false
 }
+
+variable "skip_final_snapshot" {
+    default = false
+}
+
+variable "engine" {
+    default = "aurora"
+}
