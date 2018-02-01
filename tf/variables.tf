@@ -51,7 +51,7 @@ variable "publicly_accessible" {
 }
 
 variable "skip_final_snapshot" {
-    default = false
+    default = true
 }
 
 variable "engine" {
