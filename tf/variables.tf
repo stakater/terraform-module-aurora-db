@@ -43,7 +43,7 @@ variable "cluster_instance_count" {
 }
 
 variable "cluster_instance_class" {
-    default = "db.r3.large"
+    default = "db.t2.small"
 }
 
 variable "publicly_accessible" {
