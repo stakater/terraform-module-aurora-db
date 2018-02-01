@@ -12,7 +12,7 @@ terraform {
 
 module "aurora-db" {
   source = "github.com/stakater/blueprint-storage-aws.git//modules/rds/aurora-db?ref=v0.1.0"
-  name = "${var.stack_name_prefix}-${var.environment}"
+  name = "${var.stack_name_prefix}-${var.environment}-${var.database_name}"
   vpc_id = "${var.vpc_id}"
   vpc_cidr = "${var.vpc_cidr}"
   subnets = "${var.private_subnet_ids}"
