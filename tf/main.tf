@@ -18,6 +18,7 @@ module "aurora-db" {
   subnets = "${var.private_subnet_ids}"
 
   engine         = "${var.engine}"
+  engine_version = "${var.engine_version}"
   aurora_db_name = "${var.database_name}"
   aurora_db_username = "${var.database_username}"
   aurora_db_password = "${var.database_password}"

@@ -54,6 +54,6 @@ variable "skip_final_snapshot" {
     default = true
 }
 
-variable "engine" {
-    default = "aurora"
-}
+variable "engine" { }
+
+variable "engine_version" { }
