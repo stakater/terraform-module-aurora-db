@@ -18,6 +18,7 @@
       . ./$SECRETS_FILE
       terraform init -reconfigure -backend=true -get=true -input=false \
       -backend-config="bucket=${TF_VAR_s3_bucket}" \
+      -backend-config="key=terraform_states/${TF_VAR_stack_name_prefix}-${TF_VAR_environment}-${TF_VAR_database_name}/terraform.tfstate" \
       -backend-config="region=${TF_VAR_region}"
 
       terraform plan > plan.txt

@@ -6,7 +6,6 @@ data "aws_availability_zones" azs { }
 
 terraform {
   backend "s3" {
-    key    = "terraform_states/aurora-db/terraform.tfstate"
   }
 }
 
