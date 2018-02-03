@@ -15,6 +15,7 @@ module "aurora-db" {
   vpc_id = "${var.vpc_id}"
   vpc_cidr = "${var.vpc_cidr}"
   subnets = "${var.private_subnet_ids}"
+  allowed_security_groups = "${var.allowed_security_groups}"
 
   engine         = "${var.engine}"
   engine_version = "${var.engine_version}"

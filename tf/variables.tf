@@ -17,6 +17,11 @@ variable "private_subnet_ids" {
   description = "Comma separated list of subnet ids"
 }
 
+variable "allowed_security_groups" {
+  description = "Comma-Separated List of security groups to whitelist"
+  default = ""
+}
+
 variable "database_name" {
 }
 
