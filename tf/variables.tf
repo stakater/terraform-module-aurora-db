@@ -17,6 +17,11 @@ variable "private_subnet_ids" {
   description = "Comma separated list of subnet ids"
 }
 
+variable "allowed_security_groups" {
+  description = "Comma-Separated List of security groups to whitelist"
+  default = ""
+}
+
 variable "database_name" {
 }
 
@@ -43,9 +48,17 @@ variable "cluster_instance_count" {
 }
 
 variable "cluster_instance_class" {
-    default = "db.r3.large"
+    default = "db.t2.small"
 }
 
 variable "publicly_accessible" {
     default = false
 }
+
+variable "skip_final_snapshot" {
+    default = true
+}
+
+variable "engine" { }
+
+variable "engine_version" { }
