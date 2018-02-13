@@ -36,6 +36,7 @@ $ cd /tmp
 ```
 $ mkdir -p build
 $ touch tfvars.sh
+$ touch secrets.sh
 ```
 
 2. Edit `tfvars.sh`, paste, and modify the following as needed.
@@ -58,6 +59,12 @@ export TF_VAR_database_username="root"
 export TF_VAR_engine="aurora-postgresql"
 export TF_VAR_engine_version="9.6"
 export TF_VAR_cluster_instance_class="db.r4.large"
+```
+
+Edit `secrets.sh`, and provide password for database.
+
+```
+echo "export TF_VAR_database_password=securepassword"
 ```
 
 3. Run `ansible-playbook configure.yaml create.yaml`
