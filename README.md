@@ -63,6 +63,8 @@ export TF_VAR_cluster_instance_class="db.r4.large"
 
 Edit `secrets.sh`, and provide password for database.
 
+_Note: Use secrets.sh only for those secret params that should not be commited to output repo for obvious security concerns. Any other information provided here instead of tfvars.sh would not be recorded anywhere just like passwords should not be_
+
 ```
 echo "export TF_VAR_database_password=securepassword"
 ```
